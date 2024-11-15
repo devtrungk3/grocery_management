@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
             label2 = new Label();
             btnLogin = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -59,24 +59,24 @@
             label1.TabIndex = 1;
             label1.Text = "Username";
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Font = new Font("JetBrains Mono", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(79, 270);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Enter username";
-            textBox1.Size = new Size(269, 30);
-            textBox1.TabIndex = 2;
+            txtUsername.Font = new Font("JetBrains Mono", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(79, 270);
+            txtUsername.Name = "txtUsername";
+            txtUsername.PlaceholderText = "Enter username";
+            txtUsername.Size = new Size(269, 30);
+            txtUsername.TabIndex = 2;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Font = new Font("JetBrains Mono", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(79, 365);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.PlaceholderText = "Enter password";
-            textBox2.Size = new Size(269, 30);
-            textBox2.TabIndex = 4;
+            txtPassword.Font = new Font("JetBrains Mono", 10.1999989F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(79, 365);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.PlaceholderText = "Enter password";
+            txtPassword.Size = new Size(269, 30);
+            txtPassword.TabIndex = 4;
             // 
             // label2
             // 
@@ -102,6 +102,7 @@
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // Login
             // 
@@ -110,9 +111,9 @@
             BackColor = Color.FromArgb(41, 44, 51);
             ClientSize = new Size(439, 616);
             Controls.Add(btnLogin);
-            Controls.Add(textBox2);
+            Controls.Add(txtPassword);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsername);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             ForeColor = Color.White;
@@ -128,8 +129,8 @@
 
         private PictureBox pictureBox1;
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
         private Label label2;
         protected internal Button btnLogin;
         private Button button1;

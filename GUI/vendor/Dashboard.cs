@@ -25,7 +25,14 @@ namespace GUI.vendor
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            uC_AddOrder.Visible=true;
+            uC_AddOrder.Visible = true;
+            uC_ManageOrder.Visible = false;
+        }
+
+        private void btnOrderManagement_Click(object sender, EventArgs e)
+        {
+            uC_AddOrder.Visible = false;
+            uC_ManageOrder.Visible = true;
         }
     }
 }
